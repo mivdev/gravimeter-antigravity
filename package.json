@@ -1,0 +1,50 @@
+{
+    "name": "gravimeter-antigravity",
+    "displayName": "GraviMeter — Antigravity Quota Status",
+    "description": "GraviMeter: Muestra el estado en tiempo real de la cuota semanal y de 5 horas de Gemini y otros modelos en Antigravity IDE",
+    "version": "0.0.1",
+    "publisher": "misa",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "antigravity-quota.refresh",
+                "title": "Antigravity: Actualizar Cuota",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "antigravity-quota.showDetails",
+                "title": "Antigravity: Ver Detalles de Cuota",
+                "icon": "$(info)"
+            }
+        ],
+        "configuration": {
+            "title": "Antigravity Quota Status",
+            "properties": {
+                "antigravityQuota.refreshIntervalSeconds": {
+                    "type": "number",
+                    "default": 300,
+                    "description": "Intervalo en segundos para actualizar la cuota automáticamente (mínimo 15 segundos)."
+                },
+                "antigravityQuota.lowQuotaThreshold": {
+                    "type": "number",
+                    "default": 20,
+                    "description": "Porcentaje por debajo del cual la cuota se resaltará como advertencia/error."
+                }
+            }
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mivdev/antigravity-quote-status"
+    }
+}
