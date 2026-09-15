@@ -3,7 +3,7 @@
     "displayName": "GraviMeter — Antigravity Quota Status",
     "description": "GraviMeter: Muestra el estado en tiempo real de la cuota semanal y de 5 horas de Gemini y otros modelos en Antigravity IDE",
     "version": "0.0.1",
-    "publisher": "misa",
+    "publisher": "infovita",
     "engines": {
         "vscode": "^1.90.0"
     },
